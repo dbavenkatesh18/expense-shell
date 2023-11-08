@@ -22,13 +22,18 @@ echo -e "\e[36m Creating the app directory \e[0m"
 mkdir /app  &>>$log_file
 echo $?
 
+echo -e "\e[36m removing the old content \e[0m"
+rm -rf /app/*  &>>$log_file
+echo $?
+
 echo -e "\e[36m Downloading the supporting files \e[0m"
 curl -o /tmp/backend.zip https://expense-artifacts.s3.amazonaws.com/backend.zip &>>$log_file
 echo $?
 
 echo -e "\e[36m Unzipping the supporting files \e[0m"
 cd /app
-unzip /tmp/backend.zip ; A
+unzip /tmp/backend.zip &>>$log_file
+echo $?
 
 
 echo -e "\e[36m Installing dependencies \e[0m"

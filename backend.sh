@@ -121,5 +121,5 @@ systemctl start backend &>>$log_file
 if [ $? -eq 0 ]; then
 echo "SUCCESS"
 else
-echo "FAILUREE"
+echo "FAILURE"
 fi

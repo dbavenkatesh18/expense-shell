@@ -36,6 +36,7 @@ fi
 echo -e "\e[36m creating the expense user \e[0m"
 id expense &>>$log_file
 if [ $? -ne 0 ]; then
+echo "SUCCESS"
 useradd expense &>>$log_file
 if [ $? -eq 0 ]; then
 echo "SUCCESS"

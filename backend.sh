@@ -46,6 +46,8 @@ echo $?
 
 echo -e "\e[36m Clean old nginx content \e[0m"
 systemctl daemon-reload &>>$log_file
+echo $?
 systemctl enable backend  &>>$log_file
+echo $?
 systemctl start backend &>>$log_file
 echo $?

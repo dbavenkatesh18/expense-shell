@@ -24,9 +24,10 @@ echo $?
 
 echo -e "\e[36m Downloading the supporting files \e[0m"
 curl -o /tmp/backend.zip https://expense-artifacts.s3.amazonaws.com/backend.zip &>>$log_file
+echo $?
 
 echo -e "\e[36m Unzipping the supporting files \e[0m"
-cd /app &>>$log_file
+cd /app
 unzip /tmp/backend.zip  &>>$log_file
 echo $?
 

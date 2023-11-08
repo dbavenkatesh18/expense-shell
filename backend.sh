@@ -28,8 +28,8 @@ echo $?
 
 echo -e "\e[36m Unzipping the supporting files \e[0m"
 cd /app
-unzip /tmp/backend.zip  &>>$log_file
-echo $?
+unzip /tmp/backend.zip
+
 
 echo -e "\e[36m Installing dependencies \e[0m"
 cd /app

@@ -46,7 +46,7 @@ fi
 fi
 
 echo -e "\e[36m Creating the app directory \e[0m"
-mkdir /app  &>>$log_file
+mkdir -p /app  &>>$log_file
 if [ $? -eq 0 ]; then
 echo "SUCCESS"
 else

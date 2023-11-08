@@ -49,10 +49,14 @@ echo -e "\e[36m logging to mysql database \e[0m"
 mysql -h mysql-dev.dba2devops.online -uroot -pExpenseApp@1 < /app/schema/backend.sql  &>>$log_file
 echo $?
 
-echo -e "\e[36m Clean old nginx content \e[0m"
+echo -e "\e[36m Reload the Daemon service \e[0m"
 systemctl daemon-reload &>>$log_file
 echo $?
+
+echo -e "\e[36m Enabling the service \e[0m"
 systemctl enable backend  &>>$log_file
 echo $?
+
+echo -e "\e[36m Starting the service \e[0m"
 systemctl start backend &>>$log_file
 echo $?
